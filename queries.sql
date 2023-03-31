@@ -32,31 +32,46 @@ WHERE name != 'Gabumon';
 
 SELECT  *
 FROM animals
-WHERE weight_kg BETWEEN 10.4 AND 17.3; begin; update animals
+WHERE weight_kg BETWEEN 10.4 AND 17.3; 
 
+begin; 
+update animals
 SET species = 'nonspecified';
-
 SELECT  *
-FROM animals; rollback; begin; update animals
+FROM animals; 
+rollback;
 
+begin; 
+update animals
 SET species = 'digimon'
-WHERE trim(name) like '%mon'; update animals
-
+WHERE trim(name) like '%mon';
+update animals
 SET species = 'pokemon'
-WHERE species is NULL; commit; begin; delete
+WHERE species is NULL; 
+commit;
+
+
+begin; 
+delete
 FROM animals;
-
 SELECT  *
-FROM animals; rollback;
-
+FROM animals; 
+rollback;
 SELECT  *
-FROM animals; begin; delete
+FROM animals; 
+
+begin;
+delete
 FROM animals
-WHERE date_of_birth > '01/01/2022'; savepoint neg; update animals
-
-SET weight_kg = (weight_kg * -1); rollback to neg; update animals
+WHERE date_of_birth > '01/01/2022';
+savepoint neg;
+update animals
+SET weight_kg = (weight_kg * -1);
+rollback to neg;
+update animals
 SET weight_kg = (weight_kg * -1)
-WHERE weight_kg < 0; release savepoint neg; commit;
+WHERE weight_kg < 0; release savepoint neg;
+commit;
 
 SELECT  COUNT(*)
 FROM animals;
