@@ -25,3 +25,4 @@ ALTER TABLE animals add column species_id int references species(id);
 ALTER TABLE animals add column owner_id int references owners(id);
 commit;
 
+ALTER TABLE owners ADD COLUMN email VARCHAR(120);
