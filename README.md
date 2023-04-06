@@ -134,11 +134,17 @@ To run the project, execute the following command:
 <!-- AUTHORS -->
 
 ## 👥 Authors <a name="authors"></a>
-👤 **Author1**
+👤 **Shakir-Hussain**
 
 - GitHub: [@Shakir-Hussain12](https://github.com/Shakir-Hussain12)
 - Twitter: [@S_Hussain_99](https://twitter.com/S_Hussain_99)
 - LinkedIn: [shakir-ussain99](https://www.linkedin.com/in/shakir-hussain99/)
+
+👤 **Moses Wamae**
+
+- GitHub: [@mosdevx](https://github.com/mosdevx)
+- Twitter: [@moseswamae7](https://twitter.com/moseswamae7)
+- LinkedIn: [LinkedIn](https://linkedin.com/in/moses-wamae-a13a67244)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 

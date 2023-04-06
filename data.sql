@@ -37,6 +37,20 @@ INSERT INTO visits (animal_id, vet_id, date_of_visit) VALUES (1, 1, '2020-05-24'
 -- SPECIALIZATION
 INSERT INTO specializations (vets_id, species_id) VALUES (1, 1), (3, 2), (3, 1), (4, 2);
 
+-- week2
+INSERT INTO visits (animal_id, vet_id, date_of_visit)
+SELECT  *
+FROM
+(
+	SELECT  id
+	FROM animals
+) animal_ids, (
+SELECT  id
+FROM vets) vets_ids, generate_series('1980-01-01'::timestamp, '2021-01-01', '4 hours') visit_timestamp;
+INSERT INTO owners (full_name, email)
+SELECT  'Owner ' || generate_series(1,2500000)
+       ,'owner_' || generate_series(1,2500000) || '@mail.com';
+
 -- Queries
 begin; 
 delete
@@ -120,3 +134,4 @@ FROM owners
 WHERE full_name = 'Dean Winchester')
 WHERE name in('Angemon', 'Boarmon');
 commit;
+
