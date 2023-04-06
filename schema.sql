@@ -26,3 +26,13 @@ ALTER TABLE animals add column owner_id int references owners(id);
 commit;
 
 ALTER TABLE owners ADD COLUMN email VARCHAR(120);
+
+-- Add indexes to improve performance
+CREATE INDEX animal_id_visits_asc
+ON visits(animal_id ASC);
+
+CREATE INDEX vet_id_visits_desc
+ON visits(vet_id DESC);
+
+CREATE INDEX email_owners_asc
+ON owners(email ASC);
